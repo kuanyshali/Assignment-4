@@ -1,0 +1,52 @@
+.bootstrap-theme .bootstrap-nav {
+  margin-top: 10px;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+}
+.bootstrap-theme .bootstrap-nav [class*="bootstrap-"] {
+  color: #fff;
+  font-size: 14px;
+  margin: 5px;
+  padding: 4px 7px;
+  background: #d6d6d6;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.bootstrap-theme .bootstrap-nav [class*="bootstrap-"]:hover {
+  background: #4dc7a0;
+  color: #fff;
+  text-decoration: none;
+}
+.bootstrap-theme .bootstrap-nav .disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.bootstrap-theme .bootstrap-nav.disabled + .bootstrap-dots {
+  margin-top: 10px;
+}
+
+.bootstrap-theme .bootstrap-dots {
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+}
+.bootstrap-theme .bootstrap-dots .bootstrap-dot {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+.bootstrap-theme .bootstrap-dots .bootstrap-dot span {
+  width: 10px;
+  height: 10px;
+  margin: 5px 7px;
+  background: #d6d6d6;
+  display: block;
+  -webkit-backface-visibility: visible;
+  transition: opacity 200ms ease;
+  border-radius: 30px;
+}
+.bootstrap-theme .bootstrap-dots .bootstrap-dot.active span,
+.bootstrap-theme .bootstrap-dots .bootstrap-dot:hover span {
+  background: #4dc7a0;
+}

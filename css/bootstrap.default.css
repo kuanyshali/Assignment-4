@@ -1,0 +1,52 @@
+.portfolio-theme .portfolio-nav {
+  margin-top: 10px;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+}
+.portfolio-theme .portfolio-nav [class*="portfolio-"] {
+  color: #fff;
+  font-size: 14px;
+  margin: 5px;
+  padding: 4px 7px;
+  background: #d6d6d6;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.portfolio-theme .portfolio-nav [class*="portfolio-"]:hover {
+  background: #869791;
+  color: #fff;
+  text-decoration: none;
+}
+.portfolio-theme .portfolio-nav .disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.portfolio-theme .portfolio-nav.disabled + .portfolio-dots {
+  margin-top: 10px;
+}
+
+.portfolio-theme .portfolio-dots {
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+}
+.portfolio-theme .portfolio-dots .portfolio-dot {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+.portfolio-theme .portfolio-dots .portfolio-dot span {
+  width: 10px;
+  height: 10px;
+  margin: 5px 7px;
+  background: #d6d6d6;
+  display: block;
+  -webkit-backface-visibility: visible;
+  transition: opacity 200ms ease;
+  border-radius: 30px;
+}
+.portfolio-theme .portfolio-dots .portfolio-dot.active span,
+.portfolio-theme .portfolio-dots .portfolio-dot:hover span {
+  background: #869791;
+}

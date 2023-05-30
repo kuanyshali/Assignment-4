@@ -1,0 +1,184 @@
+/**
+ * bootstrap Carousel v2.3.4
+ * Copyright 2013-2018 David Deutsch
+ * Licensed under: SEE LICENSE IN https://github.com/bootstrapCarousel2/bootstrapCarousel2/blob/master/LICENSE
+ */
+.bootstrap-carousel,
+.bootstrap-carousel .bootstrap-item {
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+}
+.bootstrap-carousel {
+  display: none;
+  width: 100%;
+  z-index: 1;
+}
+.bootstrap-carousel .bootstrap-stage {
+  position: relative;
+  -ms-touch-action: pan-Y;
+  touch-action: manipulation;
+  -moz-backface-visibility: hidden;
+}
+.bootstrap-carousel .bootstrap-stage:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+.bootstrap-carousel .bootstrap-stage-outer {
+  position: relative;
+  overflow: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+}
+.bootstrap-carousel .bootstrap-item,
+.bootstrap-carousel .bootstrap-wrapper {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+}
+.bootstrap-carousel .bootstrap-item {
+  min-height: 1px;
+  float: left;
+  -webkit-backface-visibility: hidden;
+  -webkit-touch-callout: none;
+}
+.bootstrap-carousel .bootstrap-item img {
+  display: block;
+  width: 100%;
+}
+.bootstrap-carousel .bootstrap-dots.disabled,
+.bootstrap-carousel .bootstrap-nav.disabled {
+  display: none;
+}
+.no-js .bootstrap-carousel,
+.bootstrap-carousel.bootstrap-loaded {
+  display: block;
+}
+.bootstrap-carousel .bootstrap-dot,
+.bootstrap-carousel .bootstrap-nav .bootstrap-next,
+.bootstrap-carousel .bootstrap-nav .bootstrap-prev {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.bootstrap-carousel .bootstrap-nav button.bootstrap-next,
+.bootstrap-carousel .bootstrap-nav button.bootstrap-prev,
+.bootstrap-carousel button.bootstrap-dot {
+  background: 0 0;
+  color: inherit;
+  border: none;
+  padding: 0 !important;
+  font: inherit;
+}
+.bootstrap-carousel.bootstrap-loading {
+  opacity: 0;
+  display: block;
+}
+.bootstrap-carousel.bootstrap-hidden {
+  opacity: 0;
+}
+.bootstrap-carousel.bootstrap-refresh .bootstrap-item {
+  visibility: hidden;
+}
+.bootstrap-carousel.bootstrap-drag .bootstrap-item {
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.bootstrap-carousel.bootstrap-grab {
+  cursor: move;
+  cursor: grab;
+}
+.bootstrap-carousel.bootstrap-rtl {
+  direction: rtl;
+}
+.bootstrap-carousel.bootstrap-rtl .bootstrap-item {
+  float: right;
+}
+.bootstrap-carousel .animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+.bootstrap-carousel .bootstrap-animated-in {
+  z-index: 0;
+}
+.bootstrap-carousel .bootstrap-animated-out {
+  z-index: 1;
+}
+.bootstrap-carousel .fadeOut {
+  animation-name: fadeOut;
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.bootstrap-height {
+  transition: height 0.5s ease-in-out;
+}
+.bootstrap-carousel .bootstrap-item .bootstrap-lazy {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.bootstrap-carousel .bootstrap-item .bootstrap-lazy:not([src]),
+.bootstrap-carousel .bootstrap-item .bootstrap-lazy[src^=""] {
+  max-height: 0;
+}
+.bootstrap-carousel .bootstrap-item img.bootstrap-lazy {
+  transform-style: preserve-3d;
+}
+.bootstrap-carousel .bootstrap-video-wrapper {
+  position: relative;
+  height: 100%;
+  background: #000;
+}
+.bootstrap-carousel .bootstrap-video-play-icon {
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  left: 50%;
+  top: 50%;
+  margin-left: -40px;
+  margin-top: -40px;
+  background: url(bootstrap.video.play.png) no-repeat;
+  cursor: pointer;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  transition: transform 0.1s ease;
+}
+.bootstrap-carousel .bootstrap-video-play-icon:hover {
+  -ms-transform: scale(1.3, 1.3);
+  transform: scale(1.3, 1.3);
+}
+.bootstrap-carousel .bootstrap-video-playing .bootstrap-video-play-icon,
+.bootstrap-carousel .bootstrap-video-playing .bootstrap-video-tn {
+  display: none;
+}
+.bootstrap-carousel .bootstrap-video-tn {
+  opacity: 0;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: opacity 0.4s ease;
+}
+.bootstrap-carousel .bootstrap-video-frame {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+}
